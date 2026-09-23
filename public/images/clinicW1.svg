@@ -1,0 +1,77 @@
+<svg viewBox="-60 0 1210 240" xmlns="http://www.w3.org/2000/svg">
+  
+  <!-- Tooth icon -->
+  <g transform="translate(20,10)">
+    <path
+      d="M100 15
+         C78 15, 60 22, 45 34
+         C30 24, 12 20, -10 23
+         C-40 28, -58 52, -58 85
+         C-58 110, -48 132, -36 155
+         C-28 170, -20 185, -16 200
+         C-13 212, -6 220, 6 220
+         C20 220, 28 210, 32 192
+         C35 175, 40 155, 45 148
+         C50 155, 55 175, 58 192
+         C62 210, 70 220, 84 220
+         C96 220, 104 212, 107 200
+         C111 185, 119 170, 127 155
+         C139 132, 149 110, 149 85
+         C149 52, 131 28, 100 15Z"
+      stroke="white"
+      stroke-width="14"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <path
+      d="M35 38
+         C45 42, 58 40, 70 32
+         C80 25, 92 22, 103 24"
+      stroke="white"
+      stroke-width="10"
+      fill="none"
+      stroke-linecap="round"
+    />
+
+    <path
+      d="M35 150
+         C42 138, 52 132, 60 138"
+      stroke="white"
+      stroke-width="8"
+      fill="none"
+      stroke-linecap="round"
+    />
+  </g>
+
+  <!-- Divider -->
+  <line x1="260" y1="20" x2="260" y2="220" stroke="white" stroke-width="4"/>
+
+  <!-- Top text -->
+  <text x="290" y="80"
+        font-family="Arial, sans-serif"
+        font-size="42"
+        font-weight="700"
+        fill="white">
+    Dr. Brendalyn Wansi Calacat
+  </text>
+
+  <!-- Main title -->
+  <text x="290" y="155"
+        font-family="Arial, sans-serif"
+        font-size="90"
+        font-weight="900"
+        fill="white">
+    Dental Clinic
+  </text>
+
+  <!-- Tagline -->
+  <text x="290" y="205"
+        font-family="Arial, sans-serif"
+        font-size="26"
+        fill="white">
+    Specialized Dentistry With Personalized Care
+  </text>
+
+</svg>

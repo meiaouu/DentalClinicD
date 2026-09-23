@@ -1,0 +1,34 @@
+# Environment/config secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# PHP dependencies
+/vendor/
+
+# Node dependencies
+/node_modules/
+
+# Uploads
+/public/uploads/*
+/storage/uploads/*
+
+# Backups
+*.sql
+*.sql.gz
+*.zip

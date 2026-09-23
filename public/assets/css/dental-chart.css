@@ -1,0 +1,454 @@
+:root {
+    --clinic-primary: #0f8b8d;
+    --clinic-primary-dark: #0b6f71;
+    --clinic-soft: #eefafa;
+    --clinic-border: #e5e7eb;
+    --clinic-text: #1f2937;
+    --clinic-muted: #6b7280;
+    --clinic-danger: #dc2626;
+    --clinic-warning: #d97706;
+    --clinic-success: #15803d;
+    --clinic-blue: #2563eb;
+}
+
+.odontogram-page {
+    padding: 18px 22px;
+    background: #ffffff;
+    color: var(--clinic-text);
+}
+
+.odontogram-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 14px;
+}
+
+.odontogram-header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+    color: #1f2937;
+}
+
+.eyebrow {
+    margin: 0 0 4px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--clinic-primary);
+}
+
+.subtext {
+    margin: 7px 0 0;
+    color: var(--clinic-muted);
+    font-size: 13px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 13px;
+    border: 1px solid var(--clinic-border);
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--clinic-primary-dark);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.chart-alert {
+    padding: 11px 13px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    border: 1px solid var(--clinic-border);
+    background: #f8fafc;
+    color: var(--clinic-text);
+    font-size: 14px;
+}
+
+.chart-alert-success {
+    border-color: #bbf7d0;
+    background: #f0fdf4;
+    color: #166534;
+}
+
+.chart-alert-error {
+    border-color: #fecaca;
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.odontogram-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 16px;
+    align-items: start;
+}
+
+.chart-card,
+.chart-panel,
+.all-history-card {
+    background: #ffffff;
+    border: 1px solid var(--clinic-border);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.chart-card {
+    overflow-x: auto;
+}
+
+.chart-card-header {
+    margin-bottom: 10px;
+}
+
+.chart-card-header h2,
+.all-history-card h2,
+.selected-history h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.chart-card-header p {
+    margin: 0;
+    color: var(--clinic-muted);
+    font-size: 13px;
+}
+
+.tooth-chart {
+    min-width: 980px;
+    padding: 8px 4px 12px;
+}
+
+.tooth-row {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.tooth-button {
+    position: relative;
+    border: 1px solid transparent;
+    background: transparent;
+    border-radius: 7px;
+    padding: 4px 2px 6px;
+    cursor: pointer;
+    min-height: 88px;
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.tooth-button:hover,
+.tooth-button.is-selected {
+    background: #f0fdfa;
+    border-color: #99f6e4;
+}
+
+.tooth-button.is-selected {
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 2px rgba(15, 139, 141, 0.12);
+}
+
+.tooth-button::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: -48px;
+    transform: translateX(-50%);
+    z-index: 50;
+    width: max-content;
+    max-width: 250px;
+    white-space: pre-line;
+    text-align: left;
+    padding: 9px 11px;
+    border-radius: 6px;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    color: #374151;
+    font-size: 12px;
+    line-height: 1.35;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.16);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+.tooth-button:hover::after {
+    opacity: 1;
+}
+
+.tooth-shape {
+    display: block;
+    width: 38px;
+    height: 54px;
+    margin: 0 auto;
+}
+
+.tooth-shape svg {
+    width: 100%;
+    height: 100%;
+    fill: #f8fafc;
+    stroke: #c4cdd5;
+    stroke-width: 2.8;
+    filter: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.08));
+}
+
+.tooth-shape svg path:last-child {
+    fill: none;
+    stroke: #e5e7eb;
+    stroke-width: 2.5;
+}
+
+.tooth-number {
+    display: block;
+    margin-top: 4px;
+    color: #8a8f98;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.tooth-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    min-height: 12px;
+    margin-top: 5px;
+}
+
+.tooth-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+}
+
+.tooth-indicator-planned {
+    background: var(--clinic-warning);
+}
+
+.tooth-indicator-performed {
+    background: var(--clinic-primary);
+}
+
+.tooth-indicator-completed {
+    background: var(--clinic-success);
+}
+
+.tooth-indicator-cancelled {
+    background: var(--clinic-danger);
+}
+
+.chart-section-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #777;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 16px 0 10px;
+    padding-top: 14px;
+    border-top: 1px solid #edf2f7;
+}
+
+.surface-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.surface-button {
+    border: 0;
+    background: var(--clinic-primary);
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 9px 15px;
+    font-weight: 800;
+    font-size: 13px;
+    cursor: pointer;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+.surface-button:hover,
+.surface-button.is-selected {
+    background: var(--clinic-primary-dark);
+}
+
+.procedure-chip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+}
+
+.procedure-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #c7ecec;
+    background: var(--clinic-primary);
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 11px;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    text-align: left;
+}
+
+.procedure-chip input {
+    accent-color: #ffffff;
+}
+
+.selected-box {
+    border: 1px solid #c7ecec;
+    border-radius: 9px;
+    padding: 12px;
+    margin-bottom: 14px;
+    background: #f0fdfa;
+}
+
+.selected-box span {
+    display: block;
+    color: var(--clinic-muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.selected-box strong {
+    display: block;
+    margin-top: 4px;
+    color: var(--clinic-primary-dark);
+    font-size: 24px;
+}
+
+.field-group {
+    margin-bottom: 14px;
+}
+
+.field-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.field-group select,
+.field-group textarea {
+    width: 100%;
+    border: 1px solid var(--clinic-border);
+    border-radius: 8px;
+    padding: 10px 11px;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    background: #ffffff;
+}
+
+.field-group select:focus,
+.field-group textarea:focus {
+    border-color: var(--clinic-primary);
+    box-shadow: 0 0 0 3px rgba(15, 139, 141, 0.1);
+}
+
+.save-chart-button {
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 14px;
+    background: var(--clinic-primary);
+    color: #ffffff;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.save-chart-button:hover:not(:disabled) {
+    background: var(--clinic-primary-dark);
+}
+
+.save-chart-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.selected-history {
+    margin-top: 17px;
+    padding-top: 14px;
+    border-top: 1px solid var(--clinic-border);
+}
+
+.history-list {
+    display: grid;
+    gap: 9px;
+}
+.odontogram-source-frame {
+    width: 100%;
+    min-height: 760px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.history-item {
+    border: 1px solid var(--clinic-border);
+    border-radius: 8px;
+    padding: 10px 11px;
+    background: #ffffff;
+}
+
+.history-item strong {
+    display: block;
+    font-size: 13px;
+}
+
+.history-item span,
+.history-item small,
+.history-notes,
+.empty-note {
+    display: block;
+    color: var(--clinic-muted);
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.history-notes {
+    margin-bottom: 0;
+}
+
+.all-history-card {
+    margin-top: 16px;
+}
+
+@media (max-width: 1180px) {
+    .odontogram-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-panel {
+        order: -1;
+    }
+}
+
+@media (max-width: 760px) {
+    .odontogram-page {
+        padding: 12px;
+    }
+
+    .odontogram-header {
+        flex-direction: column;
+    }
+
+    .procedure-chip-grid {
+        grid-template-columns: 1fr;
+    }
+}

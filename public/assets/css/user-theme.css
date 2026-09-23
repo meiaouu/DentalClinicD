@@ -1,0 +1,267 @@
+:root {
+    --ui-bg: #f3f4f6;
+    --ui-surface: #ffffff;
+    --ui-text: #111827;
+    --ui-muted: #6b7280;
+    --ui-border: #e5e7eb;
+    --ui-accent: #0f9d8a;
+    --ui-accent-hover: #0b7f70;
+    --ui-radius: 8px;
+    --ui-font-size: 14px;
+    --ui-density-space: 16px;
+}
+
+body.theme-light {
+    --ui-bg: #f3f4f6;
+    --ui-surface: #ffffff;
+    --ui-text: #111827;
+    --ui-muted: #6b7280;
+    --ui-border: #e5e7eb;
+}
+
+body.theme-dark {
+    --ui-bg: #0f172a;
+    --ui-surface: #111827;
+    --ui-text: #f9fafb;
+    --ui-muted: #cbd5e1;
+    --ui-border: #334155;
+}
+
+@media (prefers-color-scheme: dark) {
+    body.theme-system {
+        --ui-bg: #0f172a;
+        --ui-surface: #111827;
+        --ui-text: #f9fafb;
+        --ui-muted: #cbd5e1;
+        --ui-border: #334155;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body.theme-system {
+        --ui-bg: #f3f4f6;
+        --ui-surface: #ffffff;
+        --ui-text: #111827;
+        --ui-muted: #6b7280;
+        --ui-border: #e5e7eb;
+    }
+}
+
+body.accent-teal {
+    --ui-accent: #0f9d8a;
+    --ui-accent-hover: #0b7f70;
+}
+
+body.accent-blue {
+    --ui-accent: #2563eb;
+    --ui-accent-hover: #1d4ed8;
+}
+
+body.accent-green {
+    --ui-accent: #16a34a;
+    --ui-accent-hover: #15803d;
+}
+
+body.accent-purple {
+    --ui-accent: #7c3aed;
+    --ui-accent-hover: #6d28d9;
+}
+
+body.accent-gray {
+    --ui-accent: #4b5563;
+    --ui-accent-hover: #374151;
+}
+
+body.font-small {
+    --ui-font-size: 13px;
+}
+
+body.font-normal {
+    --ui-font-size: 14px;
+}
+
+body.font-large {
+    --ui-font-size: 16px;
+}
+
+body.density-comfortable {
+    --ui-density-space: 16px;
+}
+
+body.density-compact {
+    --ui-density-space: 10px;
+}
+
+body.radius-none {
+    --ui-radius: 0;
+}
+
+body.radius-small {
+    --ui-radius: 8px;
+}
+
+body.radius-medium {
+    --ui-radius: 12px;
+}
+
+body {
+    background: var(--ui-bg);
+    color: var(--ui-text);
+    font-size: var(--ui-font-size);
+}
+
+body.theme-dark input,
+body.theme-dark select,
+body.theme-dark textarea {
+    background: var(--ui-surface);
+    color: var(--ui-text);
+    border-color: var(--ui-border);
+}
+
+body.theme-dark table,
+body.theme-dark .card,
+body.theme-dark .dashboard-card,
+body.theme-dark .settings-card,
+body.theme-dark .dropdown,
+body.theme-dark .profile-dropdown,
+body.theme-dark .dentist-profile-dropdown,
+body.theme-dark .dentist-notify-dropdown,
+body.theme-dark .staff-profile-dropdown,
+body.theme-dark .patient-profile-dropdown {
+    background: var(--ui-surface);
+    color: var(--ui-text);
+    border-color: var(--ui-border);
+}
+
+body.theme-dark .dentist-topbar,
+body.theme-dark .staff-topbar,
+body.theme-dark .patient-topbar,
+body.theme-dark .topbar {
+    background: var(--ui-surface);
+    color: var(--ui-text);
+    border-color: var(--ui-border);
+}
+
+body.theme-dark .dentist-topbar-title,
+body.theme-dark .staff-topbar-title,
+body.theme-dark .patient-topbar-title,
+body.theme-dark .topbar-title {
+    color: var(--ui-text);
+}
+
+body.theme-dark .dentist-profile-link,
+body.theme-dark .dentist-profile-logout,
+body.theme-dark .staff-profile-link,
+body.theme-dark .patient-profile-link,
+body.theme-dark .profile-link {
+    background: var(--ui-surface);
+    color: var(--ui-text);
+}
+
+body.theme-dark .dentist-profile-link:hover,
+body.theme-dark .staff-profile-link:hover,
+body.theme-dark .patient-profile-link:hover,
+body.theme-dark .profile-link:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+body.theme-dark .dentist-profile-head,
+body.theme-dark .staff-profile-head,
+body.theme-dark .patient-profile-head,
+body.theme-dark .profile-head {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--ui-border);
+}
+
+body .btn-primary,
+body button.btn-primary,
+body .settings-btn-primary,
+body .button-primary {
+    background: var(--ui-accent);
+    border-color: var(--ui-accent);
+    color: #ffffff;
+}
+
+body .btn-primary:hover,
+body button.btn-primary:hover,
+body .settings-btn-primary:hover,
+body .button-primary:hover {
+    background: var(--ui-accent-hover);
+    border-color: var(--ui-accent-hover);
+}
+
+body a {
+    color: var(--ui-accent);
+}
+
+body .sidebar a.active,
+body .sidebar-link.active,
+body .dentist-sidebar a.active,
+body .dentist-sidebar-link.active,
+body .staff-sidebar a.active,
+body .staff-sidebar-link.active,
+body .patient-sidebar a.active,
+body .patient-sidebar-link.active {
+    background: var(--ui-accent);
+    color: #ffffff;
+}
+
+body .card,
+body .dashboard-card,
+body .content-card,
+body .settings-card,
+body .alert,
+body .dropdown,
+body .profile-dropdown,
+body input,
+body select,
+body textarea,
+body table {
+    border-radius: var(--ui-radius);
+}
+
+body.density-compact .card,
+body.density-compact .dashboard-card,
+body.density-compact .content-card,
+body.density-compact .settings-card {
+    padding: var(--ui-density-space);
+}
+
+body.density-compact input,
+body.density-compact select,
+body.density-compact button {
+    min-height: 36px;
+}
+
+body.sidebar-compact .dentist-sidebar,
+body.sidebar-compact .staff-sidebar,
+body.sidebar-compact .patient-sidebar,
+body.sidebar-compact .sidebar {
+    width: 76px !important;
+    min-width: 76px !important;
+    max-width: 76px !important;
+}
+
+body.sidebar-compact .dentist-topbar,
+body.sidebar-compact .staff-topbar,
+body.sidebar-compact .patient-topbar {
+    left: 76px;
+}
+
+body.sidebar-compact .dentist-sidebar .sidebar-text,
+body.sidebar-compact .staff-sidebar .sidebar-text,
+body.sidebar-compact .patient-sidebar .sidebar-text,
+body.sidebar-compact .sidebar .sidebar-text,
+body.sidebar-compact .dentist-sidebar span:not(.icon),
+body.sidebar-compact .staff-sidebar span:not(.icon),
+body.sidebar-compact .patient-sidebar span:not(.icon) {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    body.sidebar-compact .dentist-topbar,
+    body.sidebar-compact .staff-topbar,
+    body.sidebar-compact .patient-topbar {
+        left: 0;
+    }
+}

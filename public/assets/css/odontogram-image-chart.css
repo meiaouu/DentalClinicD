@@ -1,0 +1,150 @@
+.image-odontogram-chart {
+    width: 100%;
+    overflow-x: auto;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 18px 14px;
+    box-sizing: border-box;
+}
+
+.image-odontogram-row {
+    min-width: 1080px;
+    display: grid;
+    grid-template-columns: repeat(16, minmax(54px, 1fr));
+    gap: 12px;
+    align-items: end;
+}
+
+.image-odontogram-row-upper {
+    margin-bottom: 36px;
+}
+
+.image-tooth-button {
+    position: relative;
+    min-height: 140px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: transparent;
+    padding: 6px 4px;
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: 92px 12px 20px;
+    align-items: center;
+    justify-items: center;
+    transition:
+        background-color 0.16s ease,
+        border-color 0.16s ease,
+        transform 0.16s ease;
+}
+
+.image-tooth-button:hover {
+    background: #f9fafb;
+    border-color: #e5e7eb;
+}
+
+.image-tooth-button.is-selected {
+    background: #f0fdfa;
+    border-color: #0f766e;
+}
+
+.image-tooth-wrap {
+    width: 58px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-tooth-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    pointer-events: none;
+}
+
+.image-tooth-dots {
+    min-height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.image-tooth-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: #d97706;
+    display: inline-block;
+}
+
+.image-tooth-dot.dot-planned,
+.image-tooth-dot.dot-in-progress {
+    background: #d97706;
+}
+
+.image-tooth-dot.dot-performed {
+    background: #0891b2;
+}
+
+.image-tooth-dot.dot-completed {
+    background: #16a34a;
+}
+
+.image-tooth-dot.dot-cancelled {
+    background: #dc2626;
+}
+
+.image-tooth-number {
+    color: #111827;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.image-tooth-button.is-selected .image-tooth-number {
+    color: #0f766e;
+}
+
+.image-tooth-button.has-record {
+    border-color: #d1d5db;
+}
+
+.image-tooth-button.status-completed {
+    background: #f0fdf4;
+}
+
+.image-tooth-button.status-performed {
+    background: #ecfeff;
+}
+
+.image-tooth-button.status-planned,
+.image-tooth-button.status-in-progress {
+    background: #fffbeb;
+}
+
+.image-tooth-button.status-cancelled {
+    background: #fef2f2;
+}
+
+@media (max-width: 760px) {
+    .image-odontogram-chart {
+        padding: 12px;
+    }
+
+    .image-odontogram-row {
+        min-width: 980px;
+        gap: 8px;
+    }
+
+    .image-tooth-button {
+        min-height: 128px;
+    }
+
+    .image-tooth-wrap {
+        width: 52px;
+        height: 84px;
+    }
+}
